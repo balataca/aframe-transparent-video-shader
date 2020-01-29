@@ -1,8 +1,6 @@
-
 AFRAME.registerShader('transparent-video', {
   schema: {
-    src: { type: 'map' },
-    transparent: { default: true, is: 'uniform' }
+    src: { type: 'map' }
   },
   init: function (data) {
     const videoTexture = new THREE.VideoTexture(data.src)
@@ -11,10 +9,6 @@ AFRAME.registerShader('transparent-video', {
 
     this.material = new THREE.MeshLambertMaterial({
       map: videoTexture
-    })
-  },
-  update: function (data) {
-    this.material.src = data.src
-    this.material.transparent = data.transparent
+    })  
   }
 })
