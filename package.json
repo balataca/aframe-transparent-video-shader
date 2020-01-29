@@ -4,7 +4,7 @@
   "description": "A shader to display videos with transparency (alpha channel) for A-Frame.",
   "source": "index.js",
   "main": "dist/aframe-transparent-video-shader.js",
-  "unpkg": "dist/aframe-transparent-video-shader.umd.js", 
+  "unpkg": "dist/aframe-transparent-video-shader.umd.js",
   "author": "Augusto Zanoni",
   "license": "MIT",
   "private": false,
