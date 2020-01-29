@@ -1,0 +1,2 @@
+AFRAME.registerShader("transparent-video",{schema:{src:{type:"map"},transparent:{default:!0,is:"uniform"}},init:function(r){var t=new THREE.VideoTexture(r.src);t.minFilter=THREE.LinearFilter,t.format=THREE.RGBAFormat,this.material=new THREE.MeshLambertMaterial({map:t})},update:function(r){this.material.src=r.src,this.material.transparent=r.transparent}});
+//# sourceMappingURL=aframe-transparent-video-shader.js.map

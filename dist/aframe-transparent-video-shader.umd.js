@@ -1,0 +1,2 @@
+!function(e,t){"object"==typeof exports&&"undefined"!=typeof module?t():"function"==typeof define&&define.amd?define(t):t()}(0,function(){AFRAME.registerShader("transparent-video",{schema:{src:{type:"map"},transparent:{default:!0,is:"uniform"}},init:function(e){var t=new THREE.VideoTexture(e.src);t.minFilter=THREE.LinearFilter,t.format=THREE.RGBAFormat,this.material=new THREE.MeshLambertMaterial({map:t})},update:function(e){this.material.src=e.src,this.material.transparent=e.transparent}})});
+//# sourceMappingURL=aframe-transparent-video-shader.umd.js.map
