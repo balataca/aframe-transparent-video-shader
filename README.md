@@ -3,11 +3,10 @@
 This is a shader to display videos with transparency (Alpha Channel) such as WebM.
 
 ## Demo
----
+
 https://rare-chicken.glitch.me/
 
 ## Browser Installation
----
 
 1. Install by declaring this [script](./dist/aframe-transparent-video-shader.umd.js) after aframe
 
@@ -20,7 +19,6 @@ https://rare-chicken.glitch.me/
 ```
 
 ## NPM Installation
----
 
 1. Install the package:
 ```
@@ -34,7 +32,6 @@ import 'aframe-transparent-video-shader'
 ```
 
 ## Usage
----
 
 1. Create a video element into `a-assets` tag and declare an id.
 
