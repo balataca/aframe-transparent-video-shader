@@ -1,0 +1,31 @@
+{
+  "name": "aframe-transparent-video-shader",
+  "version": "1.0.0",
+  "description": "A shader to display videos with transparency (alpha channel) for A-Frame.",
+  "source": "index.js",
+  "main": "dist/aframe-transparent-video-shader.js",
+  "unpkg": "dist/aframe-transparent-video-shader.umd.js", 
+  "author": "Augusto Zanoni",
+  "license": "MIT",
+  "private": false,
+  "keywords": [
+    "aframe",
+    "aframe-component",
+    "aframe-shader",
+    "aframe-vr",
+    "vr",
+    "mozvr",
+    "webvr",
+    "video-shader"
+  ],
+  "scripts": {
+    "build": "microbundle --target browser",
+    "dev": "microbundle watch"
+  },
+  "peerDependencies": {
+    "aframe": "^0.9.0"
+  },
+  "devDependencies": {
+    "microbundle": "^0.11.0"
+  }
+}
