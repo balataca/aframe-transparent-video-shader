@@ -644,7 +644,7 @@ cosmiconfig@^2.1.0, cosmiconfig@^2.1.1:
   integrity sha512-GiNXLwAFPYHy25XmTPpafYvn3CLAkJ8FLsscq78MQd1Kh0OU6Yzhn4eV2MVF4G9WEQZoWEGltatdR+ntGPMl5A==
   dependencies:
     is-directory "^0.3.1"
-    js-yaml "^3.4.3"
+    js-yaml "^3.13.1"
     minimist "^1.2.0"
     object-assign "^4.1.0"
     os-homedir "^1.0.1"
@@ -1526,21 +1526,13 @@ js-tokens@^4.0.0:
   resolved "https://registry.yarnpkg.com/js-tokens/-/js-tokens-4.0.0.tgz#19203fb59991df98e3a287050d4647cdeaf32499"
   integrity sha512-RdJUflcE3cUzKiMqQgsCu06FPu9UdIJO0beYbPhHN4k6apgJtifcoCtT9bcxOpYBtpD2kCM6Sbzg4CausW/PKQ==
 
-js-yaml@^3.13.1, js-yaml@^3.4.3:
+js-yaml@^3.13.1:
   version "3.13.1"
   resolved "https://registry.yarnpkg.com/js-yaml/-/js-yaml-3.13.1.tgz#aff151b30bfdfa8e49e05da22e7415e9dfa37847"
   integrity sha512-YfbcO7jXDdyj0DGxYVSlSeQNHbD7XPWvrVWeVUujrQEoZzWJIRrCPoyk6kL6IAjAG2IolMK4T0hNUe0HOUs5Jw==
   dependencies:
     argparse "^1.0.7"
     esprima "^4.0.0"
-
-js-yaml@~3.7.0:
-  version "3.7.0"
-  resolved "https://registry.yarnpkg.com/js-yaml/-/js-yaml-3.7.0.tgz#5c967ddd837a9bfdca5f2de84253abe8a1c03b80"
-  integrity sha1-XJZ93YN6m/3KXy3oQlOr6KHAO4A=
-  dependencies:
-    argparse "^1.0.7"
-    esprima "^2.6.0"
 
 jsesc@^2.5.1:
   version "2.5.2"
@@ -3231,7 +3223,7 @@ svgo@^0.7.0:
     coa "~1.0.1"
     colors "~1.1.2"
     csso "~2.3.1"
-    js-yaml "~3.7.0"
+    js-yaml "~3.13.1"
     mkdirp "~0.5.1"
     sax "~1.2.1"
     whet.extend "~0.9.9"
