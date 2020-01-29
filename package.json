@@ -16,6 +16,7 @@
     "vr",
     "mozvr",
     "webvr",
+    "webxr",
     "video-shader"
   ],
   "scripts": {
