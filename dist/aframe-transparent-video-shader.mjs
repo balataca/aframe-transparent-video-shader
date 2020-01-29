@@ -1,2 +1,2 @@
-AFRAME.registerShader("transparent-video",{schema:{src:{type:"map"},transparent:{default:!0,is:"uniform"}},init:function(r){var t=new THREE.VideoTexture(r.src);t.minFilter=THREE.LinearFilter,t.format=THREE.RGBAFormat,this.material=new THREE.MeshLambertMaterial({map:t})},update:function(r){this.material.src=r.src,this.material.transparent=r.transparent}});
+AFRAME.registerShader("transparent-video",{schema:{src:{type:"map"}},init:function(e){var r=new THREE.VideoTexture(e.src);r.minFilter=THREE.LinearFilter,r.format=THREE.RGBAFormat,this.material=new THREE.MeshLambertMaterial({map:r})}});
 //# sourceMappingURL=aframe-transparent-video-shader.mjs.map
