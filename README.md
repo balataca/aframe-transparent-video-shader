@@ -14,7 +14,7 @@ https://aframe-transparent-video.glitch.me/
 <head>
   <title>My Scene</title>
   <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
-  <script src="https://unpkg.com/aframe-transparent-video-shader@1.0.2/dist/aframe-transparent-video-shader.umd.js"></script>
+  <script src="https://unpkg.com/aframe-transparent-video-shader@1.0.3/dist/aframe-transparent-video-shader.umd.js"></script>
 </head>
 ```
 
@@ -42,7 +42,7 @@ import 'aframe-transparent-video-shader'
   <head>
     <title>My Scene</title>
     <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
-    <script src="https://unpkg.com/aframe-transparent-video-shader@1.0.2/dist/aframe-transparent-video-shader.umd.js"></script>
+    <script src="https://unpkg.com/aframe-transparent-video-shader@1.0.3/dist/aframe-transparent-video-shader.umd.js"></script>
   </head>
 
   <body>
