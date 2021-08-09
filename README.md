@@ -62,3 +62,22 @@ import 'aframe-transparent-video-shader'
   </body>
 </html>
 ```
+
+## Video autoplay
+
+On the latest chrome versions, the autoplay is blocked by default until there is an user interaction.
+You can read more [here](https://aframe.io/docs/1.2.0/components/material.html#video-textures).
+
+Some solutions you can use to circumvent the problem:
+
+* Add a button to play the video:  
+You can find a full example [here](https://github.com/aframevr/aframe/blob/master/examples/test/video/index.html).  
+Or use the [play-on-click](https://github.com/aframevr/aframe/blob/master/examples/js/play-on-click.js) component.
+
+* Add a `click` event listener to the whole page:
+```
+document.addEventListener('click', () => {
+    video = document.querySelector('video');
+    video.play();
+});
+``` 
