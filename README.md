@@ -4,7 +4,7 @@ This is a shader to display videos with transparency (Alpha Channel) such as Web
 
 ## Demo
 
-https://rare-chicken.glitch.me/
+https://aframe-transparent-video.glitch.me/
 
 ## Browser Installation
 
@@ -13,8 +13,8 @@ https://rare-chicken.glitch.me/
 ```
 <head>
   <title>My Scene</title>
-  <script src="https://aframe.io/releases/1.0.3/aframe.min.js"></script>
-  <script src="https://unpkg.com/aframe-transparent-video-shader@1.0.1/dist/aframe-transparent-video-shader.umd.js"></script>
+  <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
+  <script src="https://unpkg.com/aframe-transparent-video-shader@1.0.2/dist/aframe-transparent-video-shader.umd.js"></script>
 </head>
 ```
 
@@ -41,8 +41,8 @@ import 'aframe-transparent-video-shader'
 <html>
   <head>
     <title>My Scene</title>
-    <script src="https://aframe.io/releases/1.0.3/aframe.min.js"></script>
-    <script src="https://unpkg.com/aframe-transparent-video-shader@1.0.1/dist/aframe-transparent-video-shader.umd.js"></script>
+    <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
+    <script src="https://unpkg.com/aframe-transparent-video-shader@1.0.2/dist/aframe-transparent-video-shader.umd.js"></script>
   </head>
 
   <body>
@@ -68,7 +68,7 @@ import 'aframe-transparent-video-shader'
 On the latest chrome versions, the autoplay is blocked by default until there is an user interaction.
 You can read more [here](https://aframe.io/docs/1.2.0/components/material.html#video-textures).
 
-Some solutions you can use to circumvent the problem:
+Some solutions you can use:
 
 * Add a button to play the video:  
 You can find a full example [here](https://github.com/aframevr/aframe/blob/master/examples/test/video/index.html).  
