@@ -7,7 +7,7 @@ AFRAME.registerShader('transparent-video', {
     const videoTexture = new THREE.VideoTexture(data.src);
     videoTexture.format = THREE.RGBAFormat;
 
-    this.material = new THREE.MeshLambertMaterial({
+    this.material = new THREE.MeshBasicMaterial({
       map: videoTexture, transparent: true,
     });
     
