@@ -3,14 +3,23 @@ AFRAME.registerShader('transparent-video', {
     src: { type: 'map' },
   },
 
-  init: function (data) {
-    const videoTexture = new THREE.VideoTexture(data.src);
-    const alphaTexture = new THREE.VideoTexture(data.src);
+  applyWebmShader: function(videoEl) {
+    const videoTexture = new THREE.VideoTexture(videoEl);
+
+    videoTexture.format = THREE.RGBAFormat;
+
+    this.material = new THREE.MeshBasicMaterial({
+      map: videoTexture, transparent: true,
+    });
+  },
+  
+  applyHEVCShader: function(videoEl) {
+    const videoTexture = new THREE.VideoTexture(videoEl);
+    const alphaTexture = new THREE.VideoTexture(videoEl);
 
     videoTexture.format = THREE.RGBAFormat;
     alphaTexture.format = THREE.AlphaFormat;
-    data.transparent = true;
-
+    
     this.material = new THREE.ShaderMaterial({
       vertexShader: `
         varying vec2 vUv;
@@ -34,9 +43,24 @@ AFRAME.registerShader('transparent-video', {
       `,
       uniforms: {
         videoTexture: { type: 't', value: videoTexture },
-        alphaTexture: { type: 't', value: alphaTexture },
+        alphaTexture: { type: 't', value: alphaTexture }
       },
-      transparent: true,
+      transparent: true
     });
+  },
+  
+  init: function (data) {
+    const videoEl = data.src;
+    const videoUrl = new URL(videoEl.currentSrc);
+    const splitedUrl = videoUrl.pathname.split('.');
+    const videoType = splitedUrl[splitedUrl.length - 1]?.toLowerCase();
+
+    data.transparent = true;
+  
+    if (videoType === 'webm') {
+      this.applyWebmShader(videoEl);
+    } else {
+      this.applyHEVCShader(videoEl);
+    }
   },
 });
