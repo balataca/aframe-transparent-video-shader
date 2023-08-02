@@ -1,6 +1,6 @@
 # Aframe Transparent Video Shader
 
-This is a shader to display videos with transparency (Alpha Channel) such as WebM.
+This is a shader to display videos with transparency (Alpha Channel) such as WebM and HEVC H265.
 
 ## Demo
 
@@ -13,8 +13,8 @@ https://aframe-transparent-video.glitch.me/
 ```
 <head>
   <title>My Scene</title>
-  <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
-  <script src="https://unpkg.com/aframe-transparent-video-shader@1.0.3/dist/aframe-transparent-video-shader.umd.js"></script>
+  <script src="https://aframe.io/releases/1.4.2/aframe.min.js"></script>
+  <script src="https://unpkg.com/aframe-transparent-video-shader@1.0.4/dist/aframe-transparent-video-shader.umd.js"></script>
 </head>
 ```
 
@@ -41,14 +41,25 @@ import 'aframe-transparent-video-shader'
 <html>
   <head>
     <title>My Scene</title>
-    <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
-    <script src="https://unpkg.com/aframe-transparent-video-shader@1.0.3/dist/aframe-transparent-video-shader.umd.js"></script>
+    <script src="https://aframe.io/releases/1.4.2/aframe.min.js"></script>
+    <script src="https://unpkg.com/aframe-transparent-video-shader@1.0.4/dist/aframe-transparent-video-shader.umd.js"></script>
   </head>
 
   <body>
     <a-scene>
       <a-assets>
-        <video id="videoId" src="https://video-src-url" muted autoplay loop="true"></video>
+        <video
+          id="videoId"
+          muted
+          loop
+          playsinline
+          webkit-playsinline
+        >
+          <!-- HEVC video for safari support -->
+          <source src="https://video-src-url/video.mov" type="video/mp4;codecs=hvc1">
+          <!-- WEBM video for chrome and firefox -->
+          <source src="https://video-src-url/video.webm" type="video/webm" />
+        </video>
       </a-assets>
       
       <a-entity
@@ -63,7 +74,9 @@ import 'aframe-transparent-video-shader'
 </html>
 ```
 
-## Video autoplay
+## Notes
+
+### Video autoplay
 
 On the latest chrome versions, the autoplay is blocked by default until there is an user interaction.
 You can read more [here](https://aframe.io/docs/1.2.0/components/material.html#video-textures).
@@ -81,3 +94,7 @@ document.addEventListener('click', () => {
     video.play();
 });
 ``` 
+
+### Safari Support
+
+Safari doesn't currently support `webm` videos with transparency, so you will need to add an extra `.mp4` or `.mov` video file with the `HEVC H.265` codec encoded with transparency enabled. See the demo code [here](https://glitch.com/edit/#!/aframe-transparent-video) for an example implementation.
