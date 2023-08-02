@@ -8,6 +8,7 @@
   "author": "Augusto Zanoni",
   "license": "MIT",
   "private": false,
+  "type": "module",
   "repository": {
     "type": "git",
     "url": "https://github.com/balataca/aframe-transparent-video-shader"
@@ -28,9 +29,9 @@
     "dev": "microbundle watch"
   },
   "peerDependencies": {
-    "aframe": "^1.2.0"
+    "aframe": "^1.4.2"
   },
   "devDependencies": {
-    "microbundle": "^0.13.3"
+    "microbundle": "^0.15.1"
   }
 }
