@@ -2,13 +2,18 @@
   "name": "aframe-transparent-video-shader",
   "version": "1.0.4",
   "description": "A shader to display videos with transparency (alpha channel) for A-Frame.",
+  "type": "module",
   "source": "index.js",
-  "main": "dist/aframe-transparent-video-shader.js",
-  "unpkg": "dist/aframe-transparent-video-shader.umd.js",
+  "exports": {
+    "require": "./dist/aframe-transparent-video-shader.cjs",
+    "default": "./dist/aframe-transparent-video-shader.modern.js"
+  },
+  "main": "./dist/aframe-transparent-video-shader.cjs",
+  "module": "./dist/aframe-transparent-video-shader.module.js",
+  "unpkg": "./dist/aframe-transparent-video-shader.umd.js",
   "author": "Augusto Zanoni",
   "license": "MIT",
   "private": false,
-  "type": "module",
   "repository": {
     "type": "git",
     "url": "https://github.com/balataca/aframe-transparent-video-shader"
